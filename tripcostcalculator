@@ -1,33 +1,31 @@
 #Python 3.6 program to determine the cost of a road trip one way and round trip.
-#Right now, it works with non decimal numbers (e.g. cost of gas = '3' gives a proper total)
-#but if one enters a decimal number for gas cost (e.g. '3.50' or '3.5') it still gives a total, but not the correct one.
 
 
 print("Trip Cost Calculator")
 
 #Ask user for trip mileage
 miles = input("How many miles is your trip?: ")
-miles = float(miles)
-print(miles)
+#miles = float(miles)
+
 
 #Ask user for the mpg of their car
 mpg = input("What is the mpg of your car?: ")
-mpg = float(mpg)
+#mpg = float(mpg)
 
-#Ask user for cost of gas. Not sure if it's taking it properly with decimals?
+#Ask user for cost of gas. Why are 2 ))'s needed at the end?
 price = float (input("What is your gas cost?: "))
-price = float(price)
 
-totalgal = int(miles) / int(mpg)
-totalgal = float (totalgal)
+
+totalgal = int (miles) / int (mpg)
+#totalgal = float (totalgal)
 
 print ("Your total gallons used is: ")
 print(totalgal)
 
-finaltot = float (int(totalgal) * int (price))
+finaltot = (totalgal) * (price)
 finaltot = float(finaltot)
 
-rttotal = int (finaltot * 2)
+rttotal = (finaltot * 2)
 rttotal = float(rttotal)
 
 print ("Your total one way cost is: ")
